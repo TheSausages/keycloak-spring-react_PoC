@@ -30,10 +30,10 @@ services:
     command:
       - "-Djboss.socket.binding.port-offset=100"
       - "-Dkeycloak.profile.feature.upload_scripts=enabled"
-#    volumes:
-#      - ../keycloak/realm:/opt/jboss/keycloak/imports
+    volumes:
+      - ../keycloak/realm:/opt/jboss/keycloak/imports
     environment:
-#      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json
+      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json
       DB_VENDOR: POSTGRES
       DB_ADDR: postgresKeycloak
       DB_DATABASE: keycloak
